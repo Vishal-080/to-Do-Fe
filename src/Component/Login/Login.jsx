@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { loginUser } from "../../feature/login/loginSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const loginUserState = useSelector((state)=> state.loginUserState)
+    console.log(loginUserState,"loginUserState");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,6 +20,13 @@ const Login = () => {
             })
         );
     };
+
+    useEffect(()=>{
+      if(loginUserState.signupSuccess) {
+        window.location.href = "http://localhost:5173/Todo";
+      }
+ 
+    },[loginUserState]);
 
   return (
     <div className="login-wrapper">
