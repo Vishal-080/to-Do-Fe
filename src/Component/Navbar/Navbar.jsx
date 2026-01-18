@@ -12,10 +12,13 @@ const Navbar = () => {
         justifyContent: "space-between",
         alignItems: "center",
         padding: "10px",
-        borderBottom: "1px solid gray",
         height: "8vh",
         backgroundColor: "navy",
         color: "white",
+        boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+        position: "sticky",
+        top: "0",
+        zIndex:"1"
       }}
     >
       <div>
