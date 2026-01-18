@@ -2,7 +2,7 @@ import React from 'react'
 
 const Todo = () => {
   return (
-    <div>Todo</div>
+    <div style={{textAlign:"center", marginTop:"100px" }}>Todo</div>
   )
 }
 

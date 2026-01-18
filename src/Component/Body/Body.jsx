@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
+import "./Body.css";
 
 export default function Body() {
-    return <div>
+    return <div style={{margin:"0px"}}>
         <Navbar />
         <div style={{height:"calc(96vh - 40px)", boxSizing:"border-box"}}>
             <Outlet/>
